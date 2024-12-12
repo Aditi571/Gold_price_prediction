@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Data Submission</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <h1>Welcome to the Data Submission Portal</h1>
+    <p>Select the type of data you want to submit from the navigation menu.</p>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('pricedata') }}">Price Data</a></li>
+            <li><a href="{{ url_for('sentiment') }}">Sentiment Data</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+        </ul>
+    </nav>
+
+    <h1>Sentiment Data Submission</h1>
+    <form method="POST">
+        <label for="dates">Date:</label>
+        <input type="text" name="dates" id="dates" required><br><br>
+
+        <label for="news">News:</label>
+        <input type="text" name="news" id="news" required><br><br>
+
+        <label for="price_direction_up">Price Direction Up:</label>
+        <input type="text" name="price_direction_up" id="price_direction_up" required><br><br>
+
+        <label for="price_direction_constant">Price Direction Constant:</label>
+        <input type="text" name="price_direction_constant" id="price_direction_constant" required><br><br>
+
+        <label for="price_direction_down">Price Direction Down:</label>
+        <input type="text" name="price_direction_down" id="price_direction_down" required><br><br>
+
+        <label for="asset_Comparision">Asset Comparision:</label>
+        <input type="text" name="asset_Comparision" id="asset_Comparision" required><br><br>
+
+        <label for="past_information">Past Information:</label>
+        <input type="text" name="past_information" id="past_information" required><br><br>
+
+        <label for="future_information">Future Information:</label>
+        <input type="text" name="future_information" id="future_information" required><br><br>
+
+        <label for="price_sentiment">Price Sentiment:</label>
+        <input type="text" name="price_sentiment" id="price_sentiment" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

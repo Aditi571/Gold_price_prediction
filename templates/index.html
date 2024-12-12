@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Submission Portal</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    
+
+    <h1>Welcome to the Data Submission Portal</h1>
+    <p>Select the type of data you want to submit from the navigation menu.</p>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('pricedata') }}">Price Data</a></li>
+            <li><a href="{{ url_for('sentiment') }}">Sentiment Data</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
